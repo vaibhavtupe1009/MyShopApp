@@ -55,7 +55,7 @@ public class RegisterUserServlet extends HttpServlet {
             String imageName;
             UserDao dao = new UserDao(connectionProvider.getConnection());
             if (dao.getUserByEmailOrMobileNo(email, moNo)) {
-                if (part.getSubmittedFileName() == "") {
+                if ("".equals(part.getSubmittedFileName())) {
                     imageName = null;
                 } else {
                     imageName = part.getSubmittedFileName();
@@ -68,7 +68,10 @@ public class RegisterUserServlet extends HttpServlet {
                     } else {
                         out.print("<h1>Image Not Save</h1>");
                     }
-                    response.sendRedirect("LogIn.jsp");
+                    Massage msg = new Massage("Registration Successfull!", "success", "alert-success");
+                    HttpSession s = request.getSession();
+                    s.setAttribute("Msg", msg);
+                    response.sendRedirect("UserRegister.jsp");
                 } else {
                     dao.saveUserWithOutProfile(user);
                     Massage msg = new Massage("Registration Successfull!", "success", "alert-success");

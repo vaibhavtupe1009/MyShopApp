@@ -1,8 +1,11 @@
+<%@page import="com.AradhanaMilkAndBekary.Entities.Massage"%>
 <%@page import="com.AradhanaMilkAndBekary.Entities.User"%>
 <%
     User user = (User) session.getAttribute("currentuser");
     if (user == null) {
-
+        Massage m = new Massage("You are not LogIn..! Login First", "error", "alert-danger");
+        HttpSession s = request.getSession();
+        s.setAttribute("Msg", m);
         response.sendRedirect("LogIn.jsp");
     } else {
 %>

@@ -57,22 +57,22 @@
                             </thead>
                             <tbody>                   
                             <div class="form-group">
-                                <div class="input-group">
-                                    <i class="fas fa-user-circle fa-2x text-primary mx-3"></i>
-                                    <input type="email" class="form-control" placeholder="Enter Email" name="uEmail" required>
+                                <div class="input-group border border-primary">
+                                    <i class="fas fa-user-circle fa-2x text-primary mx-2 my-2"></i>
+                                    <input type="email" class="form-control border border-primary" placeholder="Enter Email" name="uEmail" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="input-group">
-                                    <i class="fas fa-key fa-2x text-primary mx-3"></i>
-                                    <input type="password" class="form-control" placeholder="Enter Password Here" name="uPass" required>
+                                <div class="input-group border border-primary">
+                                    <i class="fas fa-key fa-2x text-primary mx-2 my-2 "></i>
+                                    <input type="password" class="form-control border border-primary" placeholder="Enter Password Here" name="uPass" required>
                                 </div>
                             </div>
                             </tbody>
                             <tfoot>
                             <div class="row">
                                 <div class="col-md-6 form-group text-left">
-                                    <a href="UserRegister.jsp" class="text-primary mx-3 "><i class="fas fa-user-plus"></i>  Register New</a>
+                                    <a href="UserRegister.jsp" class="text-primary mx-1 my-1 "><i class="fas fa-user-plus"></i>  Register New</a>
                                 </div>
                                 <div class="col-md-6 form-group text-right">
                                     <button class="btn btn-primary " type="submit"><i class="fas fa-lock-open"></i> LogIn</button>
